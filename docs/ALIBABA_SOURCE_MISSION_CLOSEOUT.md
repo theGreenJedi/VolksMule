@@ -1,291 +1,120 @@
-# Alibaba source mission closeout
+# Alibaba sourcing — broad-discovery closeout and roadmap continuation
 
-Closeout date: **2026-08-31**
+Updated: **2026-08-31**
 
-This file marks the engineering boundary between the first VolksMule Alibaba/Chinese-supplier sourcing mission and the next supplier-document / vehicle-integration mission.
+This file marks a narrower boundary than its original title implied.
 
-It exists so future work does not accidentally return to endless marketplace browsing after the sourcing questions have already been answered.
+> **Broad Alibaba catalog archaeology is complete. Roadmap-driven part sourcing is not.**
 
-> **Alibaba has done its first job. The next missing information lives with suppliers or in our own engineering.**
+The first research pass proved that credible Alibaba / Chinese-supplier ecosystems exist for essentially every solved Prototype 1 subsystem and identified where generic marketplace hardware is the wrong answer.
 
----
+That means we should stop asking vague questions such as:
 
-## 1. Mission question
+> "Does Alibaba have EV suspension parts?"
 
-The original mission was effectively:
-
-> Follow the Prototype 1 roadmap/checklist and determine whether the required vehicle systems can be sourced through Alibaba / Chinese supplier ecosystems, what supplier families are credible, what should be bought versus adapted/designed, and where marketplace hardware is the wrong answer.
-
-That mission is now complete enough to stop.
+But we should **continue walking the VolksMule roadmap subsystem by subsystem**, narrowing candidate hardware, supplier families, interchange opportunities, local-replacement paths, prototype pricing and purchase gates wherever public data can still improve the eventual BOM.
 
 ---
 
-## 2. What has been established
+## 1. What is closed
 
-Dedicated sourcing screens now exist for all major Prototype 1 BUY / DONOR / ADAPT categories, including:
+The following activity is closed unless a new problem appears:
 
-- e-axles;
-- onboard charger / DC-DC / PDU;
-- J3400 charging communication and inlet architecture;
-- automotive BMS;
-- LFP cells/modules;
-- HV contactors / fuse / HVIL / MSD / connectors / isolation monitoring;
-- thermal / HVAC;
-- steering / EPS;
-- friction brakes / ABS / ESC;
-- suspension corners / hubs / springs / dampers;
-- windshield/glazing / lights / mirrors / wipers / rear visibility;
-- seats / belts / airbags / restraint-system sourcing boundary;
-- wheels / tires / spare / recovery;
-- doors / latches / handles / seals / body controls;
-- accelerator / selector / key / cluster;
-- 12-V wiring / CAN / diagnostics / VCU boundary;
-- required safety automation;
-- V2L / utility AC power;
-- structure / cradle / battery-enclosure fabrication strategy.
+- generic keyword wandering;
+- proving that e-axles, BMSs, OBCs, dampers, hubs, springs, connectors, etc. exist;
+- collecting endless equivalent marketplace listings after the supplier class is already established;
+- treating seller marketing as engineering evidence;
+- chasing a part merely because it is inexpensive.
 
-The sourcing mission also established where **not** to use generic marketplace hardware:
-
-- safety-cell geometry;
-- mixed restraint components;
-- generic ABS/ESC units without calibration support;
-- ESS BMSs presented as EV BMSs;
-- generic airbags;
-- solar/ESS inverter hardware on the road-vehicle traction bus without automotive evidence;
-- undocumented central vehicle controllers;
-- overseas fabrication of geometry-changing Mule #1 weldments before CAD stabilizes.
+The broad supplier ecosystem is already documented in the detailed `ALIBABA_*` sourcing files.
 
 ---
 
-## 3. Supplier ecosystem verdict
+## 2. What remains active
 
-A credible supplier ecosystem exists for essentially every solved subsystem needed by Prototype 1.
+The active Alibaba mission is now:
 
-Current high-impact supplier leads include:
+> **Roadmap requirement → architecture constraint → candidate part/supplier family → manufacturer evidence → interchange/local-service check → BUY / DONOR / ADAPT / DESIGN verdict.**
 
-- **REPT BATTERO** — automotive BEV LFP cells;
-- **EVE** — secondary cell-manufacturer path;
-- **Rawsuns** — READ-series e-axles and RDA-series utility inverter;
-- **Sumcont** — alternate integrated drive-unit path;
-- **Dilong** — OBC / DC-DC / PDU families;
-- **MIDA / RNL** — EVCC / PLC / ISO 15118 charging controller;
-- **Phoenix Contact** — J3400 inlet benchmark;
-- **Hongfa** — automotive HV contactors;
-- **Yonggui** — HV connectors / MSD / HVIL / high-voltage boxes;
-- **Chilye** — alternate Alibaba-accessible HV interconnect / MSD path;
-- **Ligoo** — strongest current road-intent BMS lead;
-- **Suzhou Miaoyi / Mewyeah** — Alibaba-native motive-power BMS alternate;
-- **Aotecar** — EV compressor / thermal-system components;
-- **NF / EVLINK-class suppliers** — HV coolant/PTC heaters;
-- **Zhuzhou Elite** — EPS;
-- **APG / WBTL-Bethel-class suppliers** — vehicle-calibrated brake/ESC path;
-- **Songyuan / Jinheng** — integrated restraint-system supplier path;
-- **Wayou / Jieou** — accelerator pedal and physical selector;
-- relevant Tier-1 / IATF supplier families for hubs, springs, dampers, glazing and conventional hardware.
+This work can continue without supplier outreach.
 
-This is a supplier map, not a final BOM.
+Examples include:
+
+- narrowing Gen-III hub/bearing families;
+- comparing dampers and spring manufacturers against future corner-load/travel requirements;
+- identifying proven rotor/caliper/donor families that fit the brake envelope;
+- mapping CV/halfshaft suppliers once e-axle output geometry is known;
+- identifying ordinary 12-V relays, fuse blocks, switches, washer systems, horns and service hardware when the BOM reaches them;
+- tracking low-MOQ Alibaba sample paths and comparing them with local North-American replacement availability;
+- identifying which commodity hardware should intentionally be bought locally even if Alibaba is cheaper.
+
+The current Phase-5 continuation is documented in:
+
+- [`ALIBABA_PHASE5_CHASSIS_CANDIDATES.md`](ALIBABA_PHASE5_CHASSIS_CANDIDATES.md)
 
 ---
 
-## 4. Revision-A public-data mining completed after the broad sourcing audit
+## 3. Supplier outreach remains deferred
 
-After broad marketplace discovery reached diminishing returns, the mission continued long enough to convert public manufacturer data into realistic Revision-A packaging inputs.
+No supplier outreach is required for this continuation.
 
-Current focused Revision-A screens now include:
-
-- whole-vehicle interface envelopes;
-- common windshield candidates;
-- READ2982 front-drive-unit envelope;
-- conservative rear-e-axle envelope;
-- MIDA EVCC envelope;
-- steering / EPS envelope;
-- occupant / manual-seat envelope;
-- REPT cell mechanical envelope;
-- SAE J3400 inlet envelope;
-- automotive BMS physical envelope;
-- thermal / HVAC packaging envelope;
-- brake-corner envelope;
-- transparent BDU / PDU envelope.
-
-Useful public-data blockers reduced include:
-
-- actual J3400 inlet dimensions and lock/manual-release behavior;
-- actual 150-Ah REPT compression requirements and compressed dimensions;
-- e-axle road-speed compatibility checks;
-- realistic BMS controller volume;
-- realistic thermal-module/chiller/compressor volume;
-- realistic compact-SUV brake rotor conflict envelopes;
-- realistic contactor/fuse/IMD/MSD classes and BDU space.
-
----
-
-## 5. Important engineering conflicts discovered
-
-The mission did more than find parts. It exposed architecture questions early.
-
-### Rear e-axle speed
-
-READ2624's published 10,000-rpm limit is too restrictive as a permanently coupled rear unit across much of the current 28–34-in tire envelope.
-
-Revision A therefore carries READ2982-sized rear packaging until coast-drag/disconnect data proves a smaller rear unit is worth the compromise.
-
-### BMS is not zero-volume
-
-A centralized 120S-class controller can consume roughly a 400 × 160 × 60-mm component envelope before service/harness allowance. Distributed automotive BMS remains attractive but needs supplier CAD.
-
-### Thermal integration can fit without a thermal octopus
-
-Aotecar-class integrated thermal hardware fits comfortably at the vehicle scale, but a luxury four-zone cabin HVAC box is explicitly unnecessary for a simple two-seat Mule.
-
-### Brake clearance may decide 16 versus 17 in wheels
-
-Revision A carries up to ~320-mm front / ~310-mm rear rotor conflict envelopes. Study 16-in wheels first; use 17 in if validated brake/caliper clearance requires it.
-
-### Pack-current architecture needs reconciliation
-
-The detailed REPT 150-Ah baseline publicly documents less continuous cell current than would be needed to exploit both READ2982 units at their combined rated power in a simple 120S1P arrangement.
-
-This means final engineering must reconcile at least one of:
-
-- higher-power 171-Ah or alternate cell data;
-- parallel cell/string architecture;
-- intentional continuous-power limits;
-- different cell/module selection.
-
-Do **not** freeze the main fuse/contactor rating until that is resolved.
-
----
-
-## 6. What public browsing can no longer answer reliably
-
-The remaining high-value gaps are supplier-controlled or vehicle-engineering-controlled.
-
-### Supplier-controlled data
-
-Need original documents for exact quoted revisions, including:
-
-- **Rawsuns READ2982** — STEP/CAD, mounting points, output/CV spline geometry, centerlines, coolant ports, inverter/HV range, CAN/DBC, coast/drag/overspeed data;
-- **rear e-axle options** — equivalent CAD plus inactive/coast/disconnect behavior;
-- **REPT 171-Ah** — full application specification, compression, terminals, venting, cooling face, current limits, life/thermal data;
-- **Ligoo / Miaoyi BMS** — master/slave CAD, CAN/DBC, contactor/precharge/HVIL/isolation responsibilities, local service/reflash;
-- **Dilong** — exact 2-in-1 / 3-in-1 revision CAD, PDU topology, CAN, current ranges, serviceability;
-- **MIDA** — exact J3400 revision, drawing/STEP, CAN/DBC, interoperability evidence, offline configuration/recovery;
-- **Yonggui / Chilye** — exact connector/MSD CAD and application data;
-- **Hongfa** — final contactor application recommendation after current/fault profile;
-- **Aotecar** — current E-series compressor CAD and simple two-seat/single-zone HVAC-box options;
-- **Zhuzhou Elite** — rack/EPS CAD and calibration/interface package;
-- **Wayou/Jieou** — pedal/selector drawings and signal interfaces;
-- road-intent brake/ESC and restraint suppliers — vehicle-development/calibration requirements.
-
-More generic web searching cannot substitute for these files.
-
-### VolksMule engineering data
-
-Need our own work for:
-
-- actual axle loads;
-- CG height;
-- suspension hard points;
-- brake-force/thermal calculations;
-- battery current/fault study;
-- pack cell/string architecture;
-- BDU branch/fuse/contactors final ratings;
-- first whole-vehicle packaging CAD;
-- crash/restraint integration;
-- final tire/wheel/hub geometry;
-- vehicle control state machines;
-- FMVSS validation plan.
-
----
-
-## 7. Supplier outreach has NOT happened yet
-
-As of this closeout:
-
-> **No Wave-1 supplier outreach has been sent.**
-
-GitHub Issue #28 remains the campaign tracker and its supplier-contact items remain unchecked.
-
-This is intentional. The source mission was allowed to finish before opening supplier conversations so the requests could be informed, consistent and complete.
-
-The paste-ready technical request package is already stored in:
+The prepared Wave-1 RFQ package remains stored in:
 
 - [`ALIBABA_RFQ_WAVE1.md`](ALIBABA_RFQ_WAVE1.md)
 
-The first purpose of outreach is **engineering documents**, not price negotiation or large component purchases.
+Outreach should happen only when the project has extracted enough public information and internal requirements to ask focused questions rather than broad requests.
+
+Until then:
+
+> **Research first. Consolidate what VolksMule wants. Contact suppliers later.**
 
 ---
 
-## 8. Recommended outreach order
+## 4. Architecture safeguards remain unchanged
 
-Start with the suppliers that unblock the greatest amount of packaging/electrical work.
+Continuing Alibaba sourcing does **not** reopen settled project principles.
 
-### Wave 1A — architecture blockers
+Still rejected as generic marketplace purchases:
 
-1. **Rawsuns** — READ2982 CAD/application package + rear-drive alternative + RDA350 utility-inverter documentation.
-2. **REPT BATTERO** — 171-Ah and 150-Ah full automotive application packages.
-3. **Dilong** — 2-in-1 OBC/DC-DC and 3-in-1 PDU documentation.
-4. **MIDA / RNL** — J3400 EVCC CAD/interface/interoperability package.
-5. **Ligoo / Miaoyi** — automotive BMS mechanical/interface packages.
+- safety-cell architecture;
+- mixed restraint systems;
+- generic airbags;
+- ABS/ESC without vehicle calibration support;
+- ESS BMS hardware pretending to be automotive merely because voltage matches;
+- undocumented central vehicle computers;
+- structural-pack dependency;
+- cloud-required basic operation;
+- components whose fit damages whole-vehicle geometry.
 
-### Wave 1B — HV safety plumbing
-
-6. **Yonggui / Chilye** — connector/MSD/HVIL application packages.
-7. **Hongfa** — contactor application recommendation after supplying our provisional voltage/current/fault envelope.
-
-### Wave 1C — chassis/direct driver interfaces
-
-8. **Zhuzhou Elite** — EPS/rack package.
-9. **Wayou/Jieou** — accelerator/selector package.
-10. Brake/ESC and restraint suppliers once the first vehicle hard points/mass model can support a meaningful vehicle-level discussion.
-
-Rawsuns is first because the missing drive-unit geometry currently blocks front/rear cradle, CV, suspension and service-removal packaging simultaneously.
+And the computer still does not own the vehicle.
 
 ---
 
-## 9. Sample-buy rule remains unchanged
+## 5. Definition of progress
 
-Do not buy major hardware just because the sourcing mission is closed.
+A roadmap sourcing block is complete when it has:
 
-Samples only after the applicable document gate clears.
+1. a clear requirement;
+2. one or more credible supplier/manufacturer paths;
+3. manufacturer evidence beyond marketplace copy where available;
+4. known missing data;
+5. local replacement / interchange implications;
+6. a BUY / DONOR / ADAPT / DESIGN verdict;
+7. a purchase gate;
+8. durable documentation in GitHub.
 
-Likely early low-risk samples may include:
+Exact SKUs may remain intentionally open until loads, hard points, voltage/current windows or regulatory requirements exist.
 
-- a few verified automotive cells;
-- accelerator pedal / physical selector;
-- HV connectors / MSD / contactors;
-- selected thermal pumps/valves/heater;
-- development BMS hardware;
-- utility inverter only after its public specification discrepancy is resolved.
-
-Large items such as e-axles wait until CAD proves they belong.
-
----
-
-## 10. Definition of done
-
-The Alibaba source mission is complete when all of these are true:
-
-- every Prototype 1 sourcing category has been screened;
-- credible supplier families or intentional DESIGN paths exist;
-- known marketplace traps are documented;
-- public manufacturer data has been mined far enough to create useful Revision-A envelopes;
-- remaining high-value unknowns require supplier-original data or VolksMule engineering;
-- supplier outreach questions are already prepared;
-- no purchase is being forced by lack of research.
-
-All of those conditions are now met.
+That is not incomplete work. It is disciplined sourcing.
 
 ---
 
-# Closeout verdict
+# Current verdict
 
-> **ALIBABA SOURCE MISSION: COMPLETE**
+> **BROAD ALIBABA DISCOVERY: COMPLETE**
+>
+> **ROADMAP-DRIVEN ALIBABA SOURCING: ACTIVE**
+>
+> **SUPPLIER OUTREACH: DEFERRED UNTIL REQUIREMENTS ARE MATURE**
 
-The next mission is not more sourcing archaeology.
-
-It is:
-
-> **Supplier-document outreach → replace provisional boxes with original CAD/interfaces → build the first integrated packaging model.**
-
-Alibaba remains an active supplier channel and price/supply reference throughout the project, but broad discovery is no longer the critical path.
+The project should continue down the roadmap and squeeze useful sourcing knowledge out of public Alibaba/manufacturer data before opening supplier conversations.
