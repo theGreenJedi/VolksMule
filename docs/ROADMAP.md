@@ -28,40 +28,61 @@ This roadmap is intentionally ordered from understanding to commitment. It shoul
 - Write requirements as functions/performance first and components second.
 - Define how each requirement will eventually be verified.
 - Use the regulatory list as a map to existing suppliers that already build compliant components.
-- Do not begin a serious prototype BOM until the major requirement gates are understood.
 
-## Phase 3 — Make sure everything fits
+## Phase 3 — Decide what goes in the first Mule
+
+- Use [the subsystem skeleton](WHAT_GOES_IN_THE_FIRST_MULE.md) as the working architecture.
+- Choose the **kind** of solution before choosing exact part numbers.
+- Keep a welded steel safety cell with bolt-on front/rear cradles and replaceable non-structural panels.
+- Keep a real mechanical steering path with electric assist.
+- Keep hydraulic four-wheel friction brakes as the stopping foundation, with ABS/ESC/AEB pressure control and regenerative braking layered around them.
+- Use a front-primary electric e-axle and automatic on-demand rear e-axle.
+- Start battery engineering around a removable, non-structural, liquid-cooled **400-V-class LFP** pack.
+- Use SAE J3400 charging with both AC and DC capability.
+- Keep the low-voltage/service ecosystem conventional at **12 V** unless evidence gives us a reason to move.
+- Keep safety-critical vehicle control separate from infotainment/cloud systems.
+- Prefer physical controls for essential driving, visibility, and climate functions.
+- Explicitly refuse complexity that has no useful job.
+- For each subsystem, record what is BUY, DONOR, ADAPT, DESIGN, and what remains intentionally undecided.
+
+## Phase 4 — Make the chosen systems coexist
 
 - Use [the working size and packaging envelope](HOW_BIG_THE_FIRST_MULE_SHOULD_BE.md) as the starting box.
 - Keep Prototype 1 roughly first-generation-CR-V scale unless safety or engineering provides a concrete reason to move.
 - Aim for a curb weight at or below **4,200 lb**, preferably below **4,000 lb**, and a working GVWR around **5,500 lb or less** while preserving at least about **1,000 lb payload**.
 - Design for genuine occasional off-road geometry and protection rather than SUV styling alone.
 - Preserve a two-seat utility interior with a flat cargo floor, useful tool storage, and a practical sleeping/work platform.
-- Define final dimensions, mass, payload, range, ground clearance, seating, cargo envelope, wheel/tire envelope, and service-access requirements.
-- Establish battery packaging and crash-isolation constraints before choosing pack capacity.
+- Compare candidate subsystem families against the whole vehicle, not just their individual specifications.
+- Reject a component if making it fit damages the vehicle more than its extra performance is worth.
+- Establish battery packaging and crash-isolation constraints before freezing pack capacity.
 - Produce first packaging CAD showing occupants, restraints, crash structure, suspension travel, battery, drive units, cargo space, service paths, ground-clearance geometry, axle loads, and turning circle.
 
-## Phase 4 — Make it roll, steer, and stop
+## Phase 5 — Make it roll, steer, and stop
 
-- Compare donor, fabricated, and hybrid chassis/suspension/steering/brake approaches.
+- Compare candidate suspension, steering and brake families inside the architecture already chosen.
 - Prefer proven commodity parts when they meet requirements.
-- Document loads, interfaces, replacement sources, and safety margins.
+- Document loads, interfaces, replacement sources, calibration needs, and safety margins.
 - Make substitution possible through documented interfaces rather than designing the car around one supplier part.
+- Bench-test steering assist, brake actuation, ABS/ESC integration and parking-brake behavior before road testing.
 
-## Phase 5 — Make it move and grip
+## Phase 6 — Make it move and grip
 
-- Evaluate electric drivetrain architectures capable of the `if it slips, it grips` behavior.
-- Prototype slip detection and second-axle engagement logic.
+- Compare front and rear e-axle candidates that support the chosen dual-e-axle architecture.
+- Prototype slip detection and automatic rear-axle contribution logic.
+- Tune normal driving so the secondary axle disappears until useful.
 - Test transition behavior on low-friction surfaces at controlled speeds.
-- Define degraded/failure modes.
+- Define degraded/failure modes and thermal limits.
 
-## Phase 6 — Make the electricity behave
+## Phase 7 — Make the electricity behave
 
-- Define low-voltage architecture, HV isolation, contactors, charging, instrumentation, diagnostics, and local vehicle control.
+- Define 400-V-class pack voltage/capacity, cells/modules, BMS, HV isolation, contactors, charging and thermal architecture.
+- Define the 12-V power distribution, CAN/CAN-FD networks, instrumentation and diagnostics.
 - Ensure basic vehicle operation never depends on cloud services.
-- Publish wiring and interface documentation.
+- Provide offline service/update/recovery paths.
+- Publish wiring, connector, message and interface documentation.
+- Preserve an architecture path for useful external AC power and later bidirectional/V2H capability without making it a Prototype 1 blocker.
 
-## Phase 7 — Make a parts list people can actually use
+## Phase 8 — Make a parts list people can actually use
 
 - Build a BOM with alternates.
 - For each subsystem, explicitly choose BUY, ADAPT, DONOR, or DESIGN.
@@ -69,8 +90,9 @@ This roadmap is intentionally ordered from understanding to commitment. It shoul
 - Identify which parts are appropriate for additive manufacturing and which require conventional fabrication.
 - Document tooling and assembly procedures.
 - Record alternate suppliers and substitution interfaces wherever practical.
+- Mark every component whose disappearance could immobilize the vehicle.
 
-## Phase 8 — Prove it works
+## Phase 9 — Prove it works
 
 - Static structural checks.
 - Brake and steering validation.
@@ -79,7 +101,8 @@ This roadmap is intentionally ordered from understanding to commitment. It shoul
 - Regulatory verification tests as applicable.
 - Low-speed closed-course drivability and traction testing.
 - Progressive road testing only after prerequisite safety gates are satisfied.
+- Record failures as engineering data rather than hiding them.
 
-## Phase 9 — Make it repeatable
+## Phase 10 — Make it repeatable
 
 A successful VolksMule is not merely one working vehicle. The documentation should be good enough that another competent builder can understand the design, source parts or equivalents, reproduce the important assemblies, and know what still requires validation.
