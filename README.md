@@ -1,5 +1,7 @@
 # VolksMule
 
+> **Mission: Build a vehicle that doesn’t suck.**
+
 VolksMule is an experimental, open-development vehicle project exploring a simple, repairable, compact two-seat electric utility vehicle with automatic on-demand extra traction.
 
 The project is deliberately not optimized around automotive fashion, focus groups, startup theater, or feature accumulation. The question is simpler: **what would a useful vehicle look like if proven ideas were organized correctly and unnecessary nonsense was refused?**
