@@ -20,8 +20,11 @@ This roadmap is intentionally ordered from understanding to commitment. It shoul
 ## Phase 2 — Write down what the car needs
 
 - Build and maintain [the master requirements checklist](WHAT_THE_CAR_NEEDS.md).
-- Decide the federal vehicle classification before letting parts choices decide it for us.
+- Maintain [the working rules map for Prototype 1](WHAT_RULES_OUR_SUV_HAS_TO_FOLLOW.md).
+- Use **MPV** as Prototype 1's working federal classification and prove that the finished design genuinely qualifies.
+- Keep the working GVWR at or below **3,500 kg / 7,716 lb** unless a compelling engineering reason says otherwise.
 - Identify every applicable federal safety, manufacturer, EPA, labeling, reporting, and state-road-use requirement.
+- Turn every screened rule into APPLIES, APPLIES LATER, CONDITIONAL, EQUIPMENT, N/A, or VERIFY with a written reason.
 - Write requirements as functions/performance first and components second.
 - Define how each requirement will eventually be verified.
 - Use the regulatory list as a map to existing suppliers that already build compliant components.
