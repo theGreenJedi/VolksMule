@@ -32,9 +32,14 @@ This roadmap is intentionally ordered from understanding to commitment. It shoul
 
 ## Phase 3 — Make sure everything fits
 
-- Define target dimensions, mass, payload, range, ground clearance, seating, cargo envelope, wheel/tire envelope, and service-access requirements.
-- Establish battery packaging and crash-isolation constraints.
-- Produce first packaging CAD.
+- Use [the working size and packaging envelope](HOW_BIG_THE_FIRST_MULE_SHOULD_BE.md) as the starting box.
+- Keep Prototype 1 roughly first-generation-CR-V scale unless safety or engineering provides a concrete reason to move.
+- Aim for a curb weight at or below **4,200 lb**, preferably below **4,000 lb**, and a working GVWR around **5,500 lb or less** while preserving at least about **1,000 lb payload**.
+- Design for genuine occasional off-road geometry and protection rather than SUV styling alone.
+- Preserve a two-seat utility interior with a flat cargo floor, useful tool storage, and a practical sleeping/work platform.
+- Define final dimensions, mass, payload, range, ground clearance, seating, cargo envelope, wheel/tire envelope, and service-access requirements.
+- Establish battery packaging and crash-isolation constraints before choosing pack capacity.
+- Produce first packaging CAD showing occupants, restraints, crash structure, suspension travel, battery, drive units, cargo space, service paths, ground-clearance geometry, axle loads, and turning circle.
 
 ## Phase 4 — Make it roll, steer, and stop
 
