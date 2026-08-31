@@ -22,7 +22,7 @@ The project is deliberately not optimized around automotive fashion, focus group
 
 VolksMule is an early engineering and documentation project. Architecture, dimensions, components, and safety systems are not frozen. Nothing in this repository should be treated as road-ready, certified, or production-approved unless explicitly documented as such.
 
-Start with [docs/CANON.md](docs/CANON.md), then see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/ROADMAP.md](docs/ROADMAP.md).
+Start with [docs/CANON.md](docs/CANON.md), then read [what the car needs](docs/WHAT_THE_CAR_NEEDS.md). After that, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Name notice
 
