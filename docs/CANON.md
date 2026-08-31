@@ -89,3 +89,38 @@ Prototype status must always be stated plainly.
 ## 9. Architecture is allowed to evolve
 
 The drivetrain, chassis, suspension, battery system, controls, dimensions, and materials remain engineering questions until supported by evidence. Canon should constrain philosophy, not prematurely freeze solutions.
+
+## 10. The computer does not own the vehicle
+
+The vehicle computer may **inform, coordinate, optimize, log, diagnose, and assist**. It does not become the owner or sole gatekeeper of basic vehicle functions.
+
+Prototype 1 should prefer physical, tactile controls for frequent driving functions: knobs, switches, stalks, levers, and buttons. A screen may display information and expose secondary configuration, but it should not be the only practical way to operate core functions.
+
+The loss or failure of any of the following must not unnecessarily disable the basic vehicle:
+
+- infotainment computer or center display;
+- phone;
+- companion application;
+- internet connection;
+- cloud service;
+- user account or subscription.
+
+Where electrically practical, core controls should have direct, local control paths. Where a controller is required, the control interface should remain documented, local, deterministic, and independently serviceable.
+
+Core functions that should not depend on an infotainment surface include, at minimum:
+
+- steering and braking;
+- propulsion enable / drive selection;
+- hazard lamps;
+- exterior lighting;
+- wipers and washers;
+- windshield defrost / demist;
+- essential HVAC control;
+- door access and interior release;
+- parking brake or equivalent hold function;
+- rear visibility required for safe backing;
+- recovery and service functions.
+
+Convenience electrification is optional. Power windows, power locks, motorized handles, powered seats, and similar features are not requirements. Prefer the mechanical solution when it is cheaper, simpler, and easier to repair; use a powered solution only when it wins on the whole-system trade without creating unnecessary dependency.
+
+Software may make the vehicle better. It must not make ownership conditional.
