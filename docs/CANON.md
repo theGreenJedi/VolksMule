@@ -121,4 +121,6 @@ Core functions that should not depend on an infotainment surface include, at min
 - rear visibility required for safe backing;
 - recovery and service functions.
 
+Convenience electrification is optional. Power windows, power locks, motorized handles, powered seats, and similar features are not requirements. Prefer the mechanical solution when it is cheaper, simpler, and easier to repair; use a powered solution only when it wins on the whole-system trade without creating unnecessary dependency.
+
 Software may make the vehicle better. It must not make ownership conditional.
