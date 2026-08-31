@@ -4,6 +4,8 @@ This file records the durable project principles. Detailed engineering may chang
 
 ## 1. Purpose
 
+**Mission: Build a vehicle that doesn’t suck.**
+
 VolksMule is a passion project, and that is intentional. It should optimize for conviction, utility, engineering sense, and the builder's standards rather than market fashion, startup pressure, focus groups, or the need to justify itself commercially.
 
 The guiding question is:
