@@ -186,11 +186,11 @@ It is the bridge between:
 | HV coolant heater | BUY | **NF/EVLINK-class 3–7-kW** | BorgWarner-class benchmark/local Tier-1 | **CARRY family** | final heat/load/voltage | low-flow/dry-run/overtemp safety |
 | Coolant pumps | BUY | common 12-V automotive brushless pumps | Pierburg/Bosch/local equivalent | **GREEN** | flow/pressure model | local replacement, documented PWM/CAN if used |
 | Valves | BUY | ordinary automotive 2/3-way valves | local equivalent | **GREEN** | loop design | default/fail-state known |
-| Cabin air box | BUY / ADAPT / DESIGN | simple single-zone unit; exact supplier open | compact donor HVAC box | **OPEN** | dash/firewall/windshield geometry | positive defrost/defog, physical controls |
+| Cabin air box | BUY / ADAPT / DESIGN | **BEU-404-class compact single-zone benchmark; Hubei Meibiao road-intent/custom engineering path** | compact donor HVAC box | **CARRY SIMPLE SINGLE-ZONE ARCHITECTURE / exact box open** | dash/firewall/windshield geometry | positive defrost/defog; physical controls; serviceable blower/doors |
 | HVAC control head | BUY / ADAPT | **Hangzhou Guangan mechanical/tactile panel** or standardized rotary controls | donor/simple locally built control panel | **CARRY PHYSICAL ARCHITECTURE** | exact HVAC-box actuators and electrical loads | three real knobs; infotainment not required |
 | Airflow mode actuation | BUY / ADAPT | mechanical Bowden/push-pull cable first study | local 12-V position actuator | **CARRY MECHANICAL-FIRST** | HVAC-box lever geometry | defrost remains locally commandable |
 | Blower-speed control | BUY | stepped rotary switch + resistor/relay, or dedicated local PWM module | common donor blower hardware | **CARRY** | blower current/efficiency budget | tactile knob; module separately replaceable |
-| Radiator/condenser | BUY / ADAPT | common automotive heat exchanger where geometry fits | local radiator custom shop | **OPEN** | thermal model/front package | service access / stone protection |
+| Radiator/condenser | BUY / ADAPT | **HBS custom automotive heat-exchanger family; Hubei Meibiao engineering benchmark** | common donor heat exchangers / local radiator shop | **CARRY MODULAR FRONT STACK / exact cores open** | thermal model, front package, refrigerant-cycle topology | separately serviceable cores/fan; stone protection; heat-pump outdoor-exchanger duty proven if required |
 | Refrigerant lines | BUY/fabricate to spec | automotive hose/fittings | local A/C hose shop | **LOCAL-FIRST** | final layout | common service refrigerant practices |
 
 ---
@@ -207,9 +207,9 @@ It is the bridge between:
 | Accelerator pedal | BUY | **Wayou/Jieou dual-channel Hall pedal** | donor/common electronic pedal | **CARRY supplier path** | signal/geometry/VCU interface | redundant channels/fault → zero torque |
 | Drive selector | BUY | Wayou/Jieou physical rotary/lever P-R-N-D | donor/common switch | **CARRY physical path** | state-machine/interface | physical tactile control |
 | Ignition/key | BUY / ADAPT | common IATF/OEM-style keyed switch | donor/common lock cylinder | **CARRY KEY baseline** | column/dash packaging | OFF/ACC/RUN; no phone/cloud requirement |
-| Hazard/light/wiper stalks | DONOR / BUY | common automotive switch family | local donor | **OPEN** | steering column/dashboard geometry | physical, documented signals |
+| Hazard/light/wiper stalks | DONOR / BUY | **ChuangJia/ChonKia physical dual-stalk study; Jinhao/Wanchao alternate manufacturers** | common donor switch family | **CARRY PHYSICAL DUAL-STALK / exact switch open** | column diameter, cancellation, clock-spring/restraint and wiper interfaces | separate dedicated hazard button; discrete/passive low-current signals preferred; documented network only |
 | HVAC knobs | BUY / DESIGN HMI | Hangzhou Guangan mechanical/tactile control path; standard rotary shafts | donor/simple switches/potentiometers | **CARRY PHYSICAL** | dashboard/HVAC-box geometry | fan/mode/temp + physical defrost; no touch-only path |
-| Instrument cluster | BUY / ADAPT | Wuhan Green Electronic-class simple CAN cluster | donor/custom simple cluster | **OPEN** | signals/telltales/FM VSS 101 layout | independent of infotainment boot |
+| Instrument cluster | BUY / ADAPT | **Wuhan Green E408-style modest TFT + dedicated-telltale architecture** | donor/custom simple cluster | **CARRY INDEPENDENT CLUSTER / exact model open** | final FMVSS 101 telltale matrix, driver sight lines, CAN signal map | critical telltales remain compliant/persistent; independent of infotainment boot and vehicle-control authority |
 | Horn | BUY | ordinary waterproof 12-V horn | Hella/FIAMM/Denso local | **LOCAL-FIRST** | none meaningful | simple relay/two-wire service |
 | Washer pump | BUY | common OEM-fitment pump via Qeepei/Lianzheng etc. | local common pump | **LOCAL-FIRST** | reservoir/windshield | no unique interface |
 | Wiper motor/linkage | BUY / ADAPT | **Zhejiang Jixiang-class 12-V motor + conventional linkage**; Xiamen Kction alternate | common donor assembly | **CARRY supplier category / geometry open** | selected windshield/cowl wipe geometry | physical stalk, self-park, complete required wipe area |
@@ -306,6 +306,7 @@ Current examples:
 - Daier-style fuse box: **R1/R3 category** once circuit count exists; no engineering outreach needed.
 - horn / washer pump / ordinary fuses: usually **R3 by local/commodity purchase**, no supplier relationship necessary.
 - manual window regulator / L-track / common seals: **R1 category**, with exact SKU/profile waiting on body CAD rather than supplier discovery.
+- cabin air box / front heat exchangers / stalks / cluster: **R1 architecture**, with exact products waiting on packaging, thermal, electrical or regulatory interface definition rather than further marketplace discovery.
 
 ---
 
@@ -338,12 +339,15 @@ These are now more important than finding additional sellers:
 7. REPT 171-Ah detailed power/compression/thermal data;
 8. pack current/fault architecture;
 9. exact 12-V load budget;
-10. simple cabin HVAC-box geometry;
-11. restraint/crash integration;
-12. final windshield/body geometry;
-13. door / hatch geometry sufficient to freeze regulators, seals and side/rear glass;
-14. underbody impact/load-path analysis before skid thickness/attachments freeze;
-15. cargo/roof structural loads before final anchor ratings.
+10. cabin HVAC-box integration geometry in the dash/firewall/cowl;
+11. front thermal loads, stacked-core airflow and final refrigerant-cycle topology;
+12. restraint/crash integration;
+13. final windshield/body geometry;
+14. door / hatch geometry sufficient to freeze regulators, seals and side/rear glass;
+15. steering-column / clock-spring / turn-cancel geometry for exact stalk selection;
+16. final FMVSS 101 telltale matrix and cluster sight-line/interface definition;
+17. underbody impact/load-path analysis before skid thickness/attachments freeze;
+18. cargo/roof structural loads before final anchor ratings.
 
 The sourcing mission continues around these dependencies without pretending they are already solved.
 
@@ -369,9 +373,13 @@ Recent roadmap sourcing has materially narrowed:
 - cargo restraint interfaces;
 - tactile HVAC controls;
 - layered underbody protection;
-- reproducible side/rear glazing.
+- reproducible side/rear glazing;
+- the simple single-zone cabin air box;
+- a modular, separately serviceable front thermal stack;
+- physical dual stalks with a separate hazard switch and transparent low-current signals;
+- an independent instrument cluster with dedicated critical telltales.
 
-The next sourcing work should continue updating this document rather than create disconnected shopping lists.
+At this point, most remaining **OPEN** entries are not invitations to keep shopping. They are honest markers for geometry, loads, regulatory integration, control-state definitions or supplier-original engineering data that do not yet exist.
 
 For every new candidate:
 
