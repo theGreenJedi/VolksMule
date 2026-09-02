@@ -2,7 +2,7 @@
 
 Status: **working sourcing control document**
 
-Updated: **2026-08-31**
+Updated: **2026-09-01**
 
 This is not a purchase order and not a frozen production BOM.
 
@@ -37,11 +37,18 @@ It is the bridge between:
 | Front cradle | ADAPT / DESIGN | drawing-based fabrication; China later after geometry settles | local fabricated prototype | **OPEN** | READ2982 CAD, steering/suspension hard points | bolt-on/removable, service paths preserved |
 | Rear cradle | ADAPT / DESIGN | drawing-based fabrication | local fabricated prototype | **OPEN** | rear drive geometry + suspension hard points | bolt-on/removable |
 | Exterior panels | BUY / DESIGN | simple steel/aluminum/composite panels to drawing | local sheet/composite fabrication | **OPEN** | final body geometry | individually replaceable where practical |
-| Door hinges/latches | BUY / ADAPT | proven automotive hardware family | donor/common U.S. vehicle hardware | **CARRY** | door mass/axis/section | FMVSS 206 evidence for final system |
+| Door hinges/latches | BUY / ADAPT | proven automotive hardware family; donor/application latch first | donor/common U.S. vehicle hardware | **CARRY** | door mass/axis/section | FMVSS 206 evidence for final system |
 | Exterior/interior handles | BUY | mechanical conventional hardware | donor/common | **CARRY** | door architecture | must work without 12-V power |
-| Weather seals | BUY / ADAPT | extrusion/custom rubber supplier after openings freeze | donor/common extrusion profiles | **OPEN** | flange/opening geometry | replaceable, no bonded one-off dependency |
-| Windows | BUY / ADAPT | manual regulator mechanism preferred | common donor regulator | **CARRY MANUAL BASELINE** | door glass geometry | powered-window complexity avoided unless it wins |
+| Weather seals / glass channels | BUY / ADAPT | **Hebei Shida / Letu** automotive EPDM system; common profiles first | donor/common extrusion profiles | **CARRY supplier family / exact profile open** | flange/opening/glass geometry | project-owned profile specs; no one-off orphan rubber |
+| Manual window regulator | BUY / ADAPT | common mechanical regulator family; Alibaba mechanical suppliers | common donor regulator | **CARRY MANUAL BASELINE** | door glass travel/geometry | no motor/controller dependency |
+| Door / quarter / rear glazing | BUY / ADAPT | **Fuyao / Xinyi benchmark; qualified custom tempered glass to project drawing** | local automotive glass | **CARRY strategy / geometry open** | door/body openings and regulator geometry | correct FMVSS 205/ANSI Z26.1 use; project owns pane definition |
 | Locks | BUY / ADAPT | keyed/mechanical lock family | common donor lock set | **CARRY MANUAL BASELINE** | door/latch geometry | local mechanical access retained |
+| Harness grommets / boots | BUY / ADAPT | Shida/Letu molded-rubber family; standardized size vocabulary | local rubber/grommet supplier | **CARRY commodity** | harness/pass-through geometry | replaceable, documented grip/diameter/material |
+| Hood support | DESIGN / BUY commodity | mechanical prop rod baseline | passive automotive gas strut if it earns usability | **CARRY SIMPLE BASELINE** | hood mass/geometry | must not require powered mechanism |
+| Rear hatch support | BUY / ADAPT | passive automotive gas struts if top-hinged hatch | common local gas strut | **OPEN** | hatch mass/CG/hinge geometry | common ends/force/length documented |
+| Underbody structural protection | DESIGN | VolksMule pack/skid load paths | local structural fabrication | **DESIGN** | crash/impact/pack geometry | impact loads cannot be delegated to a thin cover |
+| Sacrificial skid / splash panels | DESIGN + BUY fabrication | local Mule-1 sheet/HDPE; Alibaba stable-CAD fabrication later | local | **CARRY fabrication path** | underbody geometry/service zones | removable separately from pack/suspension |
+| Wheel liners / mud flaps | BUY / DESIGN | local thermoformed prototype; Alibaba PP/PE production later | local molded/sheet plastic | **CARRY category** | tire/jounce/body geometry | cheap, replaceable, no hidden salt traps |
 
 ---
 
@@ -49,7 +56,7 @@ It is the bridge between:
 
 | Item | Mode | Preferred sourcing path | Local / alternate path | Current status | Blocker | Gate |
 |---|---|---|---|---|---|---|
-| Front suspension geometry | DESIGN | Volkswagen-owned hard points; components sourced around them | — | **DESIGN** | first packaging CAD | bump steer, scrub radius, CV angle, travel |
+| Front suspension geometry | DESIGN | VolksMule-owned hard points; components sourced around them | — | **DESIGN** | first packaging CAD | bump steer, scrub radius, CV angle, travel |
 | Rear suspension geometry | DESIGN | compact independent layout; exact architecture open | — | **DESIGN** | rear packaging/hard points | travel, cargo/pack space, toe/camber behavior |
 | Hub/bearing assemblies | BUY / ADAPT | **Zhejiang/Hangzhou Xingjie Gen-III family** | common U.S.-market hub family | **CARRY supplier family** | bolt pattern, axle spline, loads, encoder | high-volume replaceable bearing preferred |
 | Front knuckles | DONOR / ADAPT / DESIGN | existing knuckle first; drawing-based China/local if needed | common donor family | **OPEN** | steering axis/hub/brake geometry | do not let donor knuckle dictate bad kinematics |
@@ -81,8 +88,8 @@ It is the bridge between:
 |---|---|---|---|---|---|---|
 | Front rotors | BUY | high-volume ~320-mm-class application; Alibaba alternate manufacturer | local mass-market rotor family | **OPEN** | axle load, caliper, hub/bolt pattern | material/vane/runout/thermal validation |
 | Rear rotors | BUY | high-volume ~310-mm-class application | local mass-market rotor | **OPEN** | rear load/caliper/parking brake | same |
-| Front calipers | DONOR / ADAPT | proven OEM application family | APG/WBTL-supported system family | **OPEN** | hydraulic sizing, rotor, axle load | known piston/pad/seal/service parts |
-| Rear calipers | DONOR / ADAPT | proven application family, mechanical parking brake preferred | supplier-supported family | **OPEN** | parking-brake architecture | friction retention independent of HV |
+| Front calipers | DONOR / ADAPT | proven OEM application family | **APG** supported mechanical/system family | **OPEN** | hydraulic sizing, rotor, axle load | known piston/pad/seal/service parts |
+| Rear calipers | DONOR / ADAPT | proven application family, mechanical parking brake preferred | APG/supplier-supported family | **OPEN** | parking-brake architecture | friction retention independent of HV |
 | Pads | BUY | common pad shape tied to chosen caliper | local parts-store | **LOCAL-FIRST** | caliper selection | multiple formulations/sources |
 | Brake hoses | BUY regulated | compliant manufacturer for exact assemblies | U.S.-available FMVSS-106 hardware | **OPEN** | corner geometry/length | exact regulated-equipment evidence |
 | Master cylinder / booster | BUY / DONOR | proven vehicle family | supplier system package | **OPEN** | pedal ratio, caliper displacement, AEB architecture | friction brakes must stop vehicle without regen |
@@ -180,6 +187,9 @@ It is the bridge between:
 | Coolant pumps | BUY | common 12-V automotive brushless pumps | Pierburg/Bosch/local equivalent | **GREEN** | flow/pressure model | local replacement, documented PWM/CAN if used |
 | Valves | BUY | ordinary automotive 2/3-way valves | local equivalent | **GREEN** | loop design | default/fail-state known |
 | Cabin air box | BUY / ADAPT / DESIGN | simple single-zone unit; exact supplier open | compact donor HVAC box | **OPEN** | dash/firewall/windshield geometry | positive defrost/defog, physical controls |
+| HVAC control head | BUY / ADAPT | **Hangzhou Guangan mechanical/tactile panel** or standardized rotary controls | donor/simple locally built control panel | **CARRY PHYSICAL ARCHITECTURE** | exact HVAC-box actuators and electrical loads | three real knobs; infotainment not required |
+| Airflow mode actuation | BUY / ADAPT | mechanical Bowden/push-pull cable first study | local 12-V position actuator | **CARRY MECHANICAL-FIRST** | HVAC-box lever geometry | defrost remains locally commandable |
+| Blower-speed control | BUY | stepped rotary switch + resistor/relay, or dedicated local PWM module | common donor blower hardware | **CARRY** | blower current/efficiency budget | tactile knob; module separately replaceable |
 | Radiator/condenser | BUY / ADAPT | common automotive heat exchanger where geometry fits | local radiator custom shop | **OPEN** | thermal model/front package | service access / stone protection |
 | Refrigerant lines | BUY/fabricate to spec | automotive hose/fittings | local A/C hose shop | **LOCAL-FIRST** | final layout | common service refrigerant practices |
 
@@ -198,11 +208,11 @@ It is the bridge between:
 | Drive selector | BUY | Wayou/Jieou physical rotary/lever P-R-N-D | donor/common switch | **CARRY physical path** | state-machine/interface | physical tactile control |
 | Ignition/key | BUY / ADAPT | common IATF/OEM-style keyed switch | donor/common lock cylinder | **CARRY KEY baseline** | column/dash packaging | OFF/ACC/RUN; no phone/cloud requirement |
 | Hazard/light/wiper stalks | DONOR / BUY | common automotive switch family | local donor | **OPEN** | steering column/dashboard geometry | physical, documented signals |
-| HVAC knobs | BUY / DESIGN HMI | physical rotary knobs/switches | donor/simple potentiometer/encoder controls | **CARRY PHYSICAL** | HVAC controller architecture | screen not sole control path |
+| HVAC knobs | BUY / DESIGN HMI | Hangzhou Guangan mechanical/tactile control path; standard rotary shafts | donor/simple switches/potentiometers | **CARRY PHYSICAL** | dashboard/HVAC-box geometry | fan/mode/temp + physical defrost; no touch-only path |
 | Instrument cluster | BUY / ADAPT | Wuhan Green Electronic-class simple CAN cluster | donor/custom simple cluster | **OPEN** | signals/telltales/FM VSS 101 layout | independent of infotainment boot |
 | Horn | BUY | ordinary waterproof 12-V horn | Hella/FIAMM/Denso local | **LOCAL-FIRST** | none meaningful | simple relay/two-wire service |
 | Washer pump | BUY | common OEM-fitment pump via Qeepei/Lianzheng etc. | local common pump | **LOCAL-FIRST** | reservoir/windshield | no unique interface |
-| Wiper motor/linkage | DONOR / BUY | common assembly paired to selected windshield | local donor | **OPEN** | windshield choice | complete required wipe area |
+| Wiper motor/linkage | BUY / ADAPT | **Zhejiang Jixiang-class 12-V motor + conventional linkage**; Xiamen Kction alternate | common donor assembly | **CARRY supplier category / geometry open** | selected windshield/cowl wipe geometry | physical stalk, self-park, complete required wipe area |
 
 ---
 
@@ -211,10 +221,12 @@ It is the bridge between:
 | Item | Mode | Preferred path | Alternate | Status | Blocker | Gate |
 |---|---|---|---|---|---|---|
 | Windshield | BUY / ADAPT body | carry CR-V FW02294, Nissan FW02510, CR-V FW02023 geometries | whichever common glass wins CAD | **OPEN, 3-family study** | body/A-pillar/cowl/wiper CAD | AS1, replacement depth, good visibility |
-| Side/rear glass | BUY / ADAPT | common compliant glazing / SYP/Xinyi-class supplier | local auto glass | **OPEN** | door/body geometry | correct markings/standard evidence |
+| Movable door glass | BUY / custom to drawing | **Fuyao / Xinyi road-intent benchmark; qualified custom tempered glass** | local automotive glass | **CARRY strategy / geometry open** | door/regulator/channel geometry | FMVSS 205 location evidence; drawing belongs to project |
+| Quarter / fixed side glass | BUY to drawing | qualified custom tempered automotive glass manufacturer | local specialist | **CARRY custom strategy** | body opening/curvature | multiple-source reproducibility |
+| Rear backlite | BUY / custom | Fuyao/SYP/qualified heated backlite supplier | local auto glass | **CARRY SIMPLE HEATED STRATEGY** | rear closure geometry / heater load | simple two-terminal heater; physical switch/relay |
 | Headlamps | BUY complete optics | standardized compliant module | donor/common sealed optical unit | **OPEN** | front styling/height/beam package | complete compliant optic, not random LED bulb |
 | Tail/turn/brake lamps | BUY complete module | common compliant lamp modules | local trailer/automotive compliant hardware if suitable | **OPEN** | body geometry | required photometry/markings |
-| Mirrors | BUY | conventional common mirror assemblies | donor/local | **OPEN** | door/A-pillar geometry | natural visibility first, no camera-only need |
+| Mirrors | BUY | conventional simple mirror assemblies | donor/local | **OPEN** | door/A-pillar geometry | natural visibility first; no camera-only need |
 | Rear camera | BUY | dedicated automotive camera/display path | supplier module/local | **CARRY** | display/placement | image within required timing; independent of infotainment |
 
 ---
@@ -223,8 +235,10 @@ It is the bridge between:
 
 | Item | Mode | Preferred path | Alternate | Status | Blocker | Gate |
 |---|---|---|---|---|---|---|
-| Manual seats | BUY / ADAPT | simple automotive manual seat frame/system | donor/common seat | **OPEN** | floor/H-point/restraint integration | manual, head restraint, crash-compatible |
-| Seat tracks | BUY / ADAPT | integrated with seat supplier | donor/common | **OPEN** | floor/seat choice | anchorage loads / service |
+| Manual seat frame | BUY / ADAPT | **Suzhou Chuangtou** automotive manual frame/mechanism family | donor/common road seat | **CARRY supplier family / exact frame open** | floor/H-point/restraint integration | manual, head restraint, crash/load evidence |
+| Seat tracks | BUY | qualified automotive manual dual-rail slides; Chuangtou-class | donor/common | **CARRY MANUAL ARCHITECTURE** | floor/frame choice | documented crash/pull-out/cycle strength |
+| Manual recliner | BUY | qualified automotive manual recliner mechanism | donor/common | **CARRY MANUAL ARCHITECTURE** | frame/back geometry | documented torque/crash/cycle capacity |
+| Foam / trim | BUY to drawing | simple durable cloth/vinyl + molded foam | local upholstery | **OPEN** | final seat frame/H-point | flammability/airbag/belt fit as applicable |
 | Belts/pretensioners | SYSTEM | **Songyuan Safety** integrated path | Jinheng alternate | **SYSTEM** | body/seat/crash development | FMVSS 209/210/etc as applicable |
 | Airbags | SYSTEM | Songyuan/Jinheng integrated system | qualified restraint supplier | **SYSTEM** | crash structure/occupant model | never generic/mixed inflators |
 | Restraint ECU/sensors | SYSTEM | same integrated supplier | same | **SYSTEM** | full vehicle crash architecture | one coherent validated system |
@@ -262,10 +276,13 @@ It is the bridge between:
 | Item | Mode | Preferred path | Alternate | Status | Blocker | Gate |
 |---|---|---|---|---|---|---|
 | 120-V outlet | BUY + DESIGN protection | conventional receptacle/GFCI appropriate to inverter topology | local electrical hardware | **OPEN** | inverter neutral/ground topology | shock/ground-fault/weather protection |
-| Cargo tie-downs | BUY / DESIGN mounting | commodity forged rings/rails | local | **LOCAL-FIRST** | cargo floor structure | load-rated mounting |
-| Tool storage | DESIGN / fabricate | simple boxes/trays | local | **OPEN** | interior package | accessible, no powered mechanisms needed |
-| Sleeping/work platform | DESIGN | flat cargo structure/panels | local | **DESIGN** | seats/cargo geometry | ~6-ft practical surface target |
-| Roof-rack mounts | DESIGN + BUY hardware | common rack interface once roof structure exists | local | **OPEN** | roof load/crash structure | structural hard points documented |
+| Cargo track / movable tie-downs | BUY + DESIGN mounting | **Ningbo Reach L-track first study**; standard single-stud fittings | local/common L-track ecosystem | **CARRY OPEN INTERFACE** | floor crossmember/load path | vehicle rating includes track → fastener → reinforcement → body |
+| Fixed heavy cargo anchors | BUY + DESIGN mounting | conventional forged/recessed D-rings | local truck/cargo hardware | **OPEN** | specific heavy-load locations | whole load path validated |
+| Tool storage | DESIGN / fabricate | simple boxes/trays + L-track mounting | local | **OPEN** | interior package | accessible, no powered mechanisms needed |
+| Sleeping/work platform | DESIGN | flat cargo structure/panels | local | **DESIGN** | seats/cargo geometry | ~6-ft practical surface target; track does not ruin flat floor |
+| Roof-rack mounts | DESIGN + BUY hardware | documented reinforced threaded hard points; common crossbars later | local | **DESIGN / OPEN LOAD** | roof/crash/airbag structure | project-owned coordinates/load limits/sealing |
+| Spare retention | BUY / DESIGN mounting | structural internal track/strap or common underbody winch after location study | local | **OPEN** | final spare location | full-size spare cannot become crash projectile |
+| Grab handles | BUY / ADAPT | simple conventional donor/Alibaba handle | local | **CARRY COMMODITY** | occupant ergonomics / reinforcement | trim is not structural load path |
 
 ---
 
@@ -288,6 +305,7 @@ Current examples:
 - REPT 171-Ah: **R2 eventually** for detailed application spec.
 - Daier-style fuse box: **R1/R3 category** once circuit count exists; no engineering outreach needed.
 - horn / washer pump / ordinary fuses: usually **R3 by local/commodity purchase**, no supplier relationship necessary.
+- manual window regulator / L-track / common seals: **R1 category**, with exact SKU/profile waiting on body CAD rather than supplier discovery.
 
 ---
 
@@ -322,7 +340,10 @@ These are now more important than finding additional sellers:
 9. exact 12-V load budget;
 10. simple cabin HVAC-box geometry;
 11. restraint/crash integration;
-12. final windshield/body geometry.
+12. final windshield/body geometry;
+13. door / hatch geometry sufficient to freeze regulators, seals and side/rear glass;
+14. underbody impact/load-path analysis before skid thickness/attachments freeze;
+15. cargo/roof structural loads before final anchor ratings.
 
 The sourcing mission continues around these dependencies without pretending they are already solved.
 
@@ -330,9 +351,9 @@ The sourcing mission continues around these dependencies without pretending they
 
 # 20. Phase-8 working verdict
 
-The first usable sourcing BOM skeleton now exists.
+The sourcing BOM now includes both the major power/chassis systems and the supposedly-small service parts that often create long-term ownership misery.
 
-It shows that Prototype 1 is not waiting for some mythical custom automotive supply chain. Most of the car divides cleanly into:
+Prototype 1 continues to divide cleanly into:
 
 - **VolksMule-designed geometry and interfaces**;
 - **proven automotive systems requiring supplier integration/calibration**;
@@ -340,7 +361,17 @@ It shows that Prototype 1 is not waiting for some mythical custom automotive sup
 - **local replacement parts**;
 - **a relatively small set of supplier-original-data blockers.**
 
-The next sourcing work should update this document rather than create disconnected shopping lists.
+Recent roadmap sourcing has materially narrowed:
+
+- body-service mechanisms;
+- manual seat hardware;
+- seals / glass channels / grommets;
+- cargo restraint interfaces;
+- tactile HVAC controls;
+- layered underbody protection;
+- reproducible side/rear glazing.
+
+The next sourcing work should continue updating this document rather than create disconnected shopping lists.
 
 For every new candidate:
 
